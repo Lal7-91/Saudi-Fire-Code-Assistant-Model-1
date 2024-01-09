@@ -13,8 +13,8 @@ from langchain.vectorstores import faiss
 FAISS = faiss.FAISS
 
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
-#os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+#openai.api_key = os.getenv("OPENAI_API_KEY")
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 
 

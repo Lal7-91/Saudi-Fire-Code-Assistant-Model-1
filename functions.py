@@ -69,7 +69,7 @@ def ask(file_name, question):
     )
 
     
-    prompt = "\n".join(conversation_history) + "\n" + question
+    prompt = "give me spacific answer that is enogh to give full understand" + "\n" + question
 
     response = responce_chain(
         creat_embedding(creat_docs(load_and_extract_one_pdf(file_name))), prompt=prompt, LLM = LLM)

@@ -69,7 +69,7 @@ def ask(file_name, question):
     )
 
     
-    prompt = "give me spacific answer that is enogh to give full understand and try to make it simple, compleate, and loong enough" + "\n" + question
+    prompt = "give me specific answer that is enough to give full understanding and try to make it simple, completae, and long enough, and give the rule number of each. Don`t take information from another source. " + "\n" + question
 
     response = responce_chain(
         creat_embedding(creat_docs(load_and_extract_one_pdf(file_name))), prompt=prompt, LLM = LLM)

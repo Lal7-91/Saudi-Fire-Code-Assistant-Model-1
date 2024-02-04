@@ -69,7 +69,7 @@ def ask(file_name, question):
     )
 
     
-    prompt = "give me specific answer that is enough to give full understanding and try to make it simple, completae, and long enough, and give the rule number of each. Don`t take information from another source. " + "\n" + question
+    prompt = " You will get a document about the Saudi fire code. You will get a question about it,  give specific answers that is complete, 100% right, and long enough, and give the rule number of each. DO NOT take information from another source. DO NOT answer any unrelated questions.  " + "\n" + question
 
     response = responce_chain(
         creat_embedding(creat_docs(load_and_extract_one_pdf(file_name))), prompt=prompt, LLM = LLM)
